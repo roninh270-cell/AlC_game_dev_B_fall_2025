@@ -13,16 +13,22 @@ public class Balloon : MonoBehaviour
     public GameObject popEffect; //Refrance pop effect particle system
 
     void OnMouseDown()
+    {
 
-    //reduce clicks by one
-    clickToPop -=1;
-    /// <summary>
-    /// increase balloon size
-    transform.localScale+= Vector3.one * scaleToIncrease
-    /// check to see if the balloon has popped
-    If(clickToPop == 0)
+
+        //reduce clicks by one
+        clickToPop -= 1;
+        /// <summary>
+        /// increase balloon size
+        transform.localScale += Vector3.one * scaleToIncrease;
+        /// check to see if the balloon has popped
+        if (clickToPop == 0);
+        {
+            Destroy(gameObject);
+        }
+    } 
 // scoreManager.IncreaseScoreText()
-Destroy(gameObject);
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

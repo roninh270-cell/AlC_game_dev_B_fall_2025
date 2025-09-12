@@ -1,5 +1,6 @@
 using UnityEngine;
-
+using System.Collections;
+using System.Collections.Generic;
 public class MoveUp : MonoBehaviour
 {
     public float speed = 3.0f;
