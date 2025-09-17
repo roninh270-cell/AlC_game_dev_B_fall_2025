@@ -119,6 +119,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4418963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4418964}
+  - component: {fileID: 4418965}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4418964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4418963}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.547439, y: 8.126297, z: 269.4768}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4418965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4418963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e6f0860508e2e4a90ca97431b46662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  scoreText: {fileID: 1427063710}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickToPop: 3
   scaleToIncrease: 0.15
-  scoreToGive: 0
+  scoreToGive: 1
   popEffect: {fileID: 0}
 --- !u!114 &474333827
 MonoBehaviour:
@@ -593,7 +639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a223b6521f81c17418ab57d70115ee89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2.5
 --- !u!1 &488876141 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7763440594236149762, guid: a40fc77958d41a244b0ed55492743a62, type: 3}
@@ -613,7 +659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickToPop: 3
   scaleToIncrease: 0.15
-  scoreToGive: 0
+  scoreToGive: 1
   popEffect: {fileID: 0}
 --- !u!114 &488876150
 MonoBehaviour:
@@ -796,9 +842,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deab4534b2426d84a88d5ba391fe2c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickToPop: 3
+  clickToPop: 5
   scaleToIncrease: 0.15
-  scoreToGive: 0
+  scoreToGive: 4
   popEffect: {fileID: 0}
 --- !u!114 &924633940
 MonoBehaviour:
@@ -812,7 +858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a223b6521f81c17418ab57d70115ee89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1.5
 --- !u!1 &1320006461 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 152791663691740242, guid: a319da860e0a6694cb2631ddead5c380, type: 3}
@@ -832,7 +878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickToPop: 3
   scaleToIncrease: 0.15
-  scoreToGive: 0
+  scoreToGive: 1
   popEffect: {fileID: 0}
 --- !u!114 &1320006470
 MonoBehaviour:
@@ -846,7 +892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a223b6521f81c17418ab57d70115ee89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 3.33
 --- !u!1 &1427063708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,3 +1693,4 @@ SceneRoots:
   - {fileID: 848107727}
   - {fileID: 1615797557}
   - {fileID: 1923774661}
+  - {fileID: 4418964}

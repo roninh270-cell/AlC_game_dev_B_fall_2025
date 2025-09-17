@@ -1,7 +1,9 @@
 using UnityEngine;
 
+
 public class Balloon : MonoBehaviour
 {
+
     public int clickToPop = 3; // How many clicks till the ballon pops
 
     public float scaleToIncrease = 0.15f; // scale incresed each time the ballon is clicked
@@ -14,30 +16,30 @@ public class Balloon : MonoBehaviour
 
     void OnMouseDown()
     {
-
-
         //reduce clicks by one
         clickToPop -= 1;
         /// <summary>
         /// increase balloon size
         transform.localScale += Vector3.one * scaleToIncrease;
         /// check to see if the balloon has popped
-        if (clickToPop == 0);
+        if (clickToPop == 0) 
         {
+            scoreManager.IncreaseScoreText(scoreToGive);// increase the text 
             Destroy(gameObject);
         }
-    } 
-// scoreManager.IncreaseScoreText()
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
     }
+    // scoreManager.IncreaseScoreText()
+
+    
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    void Start()
+    // refrance score manager component
+    {
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     }
 }
