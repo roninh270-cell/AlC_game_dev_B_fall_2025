@@ -22,10 +22,11 @@ public class Balloon : MonoBehaviour
         /// increase balloon size
         transform.localScale += Vector3.one * scaleToIncrease;
         /// check to see if the balloon has popped
-        if (clickToPop == 0) 
+        if (clickToPop == 0)
         {
             scoreManager.IncreaseScoreText(scoreToGive);// increase the text 
             Destroy(gameObject);
+            Instantiate(popEffect, transform.position, transform.rotation);
         }
     }
     // scoreManager.IncreaseScoreText()
