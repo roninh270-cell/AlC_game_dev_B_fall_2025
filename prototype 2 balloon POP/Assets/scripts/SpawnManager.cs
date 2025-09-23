@@ -10,9 +10,9 @@ public class SpawnManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        InvokeRepeating("SpawnTandomBalloon", startDelay, spawnInterval);
+        InvokeRepeating("SpawnRandomBalloon", startDelay, spawnInterval);
     }
-    void spawnRanomBalloon()
+    void SpawnRandomBalloon()
     {
         //Get a random position on the x-axis
         Vector3 spawnPos = new Vector3(Random.Range(-xRange, xRange), yPos, 0);
