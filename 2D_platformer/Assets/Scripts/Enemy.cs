@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         // move to the target
-        transform.position = Vector3.MoveTwowards(transform.position, moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
 
         //are we at the target position
         if (transform.position == targetPos)
@@ -43,13 +43,13 @@ public class Enemy : MonoBehaviour
     {
         if (collision.CompareTag("Player"))//did the player hit us?
         {
-            collision.GetCompounent<PlayerController2D>().GameOVer();
+            collision.GetComponent<PlayerController_2D>().GameOver();
         }
     }
     private void OnDrawnGizmos()
     {
-        vector3 from;
-        vector2 to;
+        Vector3 from;
+        Vector2 to;
 
         if (Application.isPlaying)
         {
@@ -62,8 +62,10 @@ public class Enemy : MonoBehaviour
         }
         to = from + moveOffset;
 
-        OnDrawnGizmos.color = Color.red;
-        
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(from, to);
+        Gizmos.DrawWireSphere(to, 0.2f);
+        Gizmos.DrawWireSphere(from, 0.2f);
     }
 
 }    

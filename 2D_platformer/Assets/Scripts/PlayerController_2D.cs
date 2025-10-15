@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;// add scene managment name space
 using TMPro;// add the TMPro Namspace
-public class PlayerControler_2D : MonoBehaviour
+public class PlayerController_2D : MonoBehaviour
 {
     //value types
     [Header("Player Settings")]
@@ -27,7 +27,7 @@ public class PlayerControler_2D : MonoBehaviour
         //Add to score
         score += amount;
         //update score text ui
-        score.Text = "score: " + score;
+        scoreText.text = "score: " + score;
     }
 
 
@@ -36,7 +36,7 @@ public class PlayerControler_2D : MonoBehaviour
         //gather inputes
         float moveInput = Input.GetAxisRaw("Horizontal");
         //make the player move side to side
-        rig.velocity = new Vectore2(moveInput * moveSpeed, rig.velocity);
+        rig.linearVelocity = new Vector2(moveInput * moveSpeed, rig.linearVelocity.y);
     }
 
 
@@ -48,7 +48,7 @@ public class PlayerControler_2D : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
         {
             isGrounded = false;
-            rig.AddForce(vector2.up * jumpForce, ForceMode2D.Impulse);
+            rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
         // if we fall below bottom bound(-4) on the y axis then game over is triggerd
