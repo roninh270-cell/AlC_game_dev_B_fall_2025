@@ -31,11 +31,14 @@ public class Enemy : MonoBehaviour
             {
                 targetPos = startPos + moveOffset;
             }
+
+
+            else
+            {
+                targetPos = startPos;
+            }
         }
-        else
-        {
-            targetPos = startPos;
-        }
+    
     }
 
 
