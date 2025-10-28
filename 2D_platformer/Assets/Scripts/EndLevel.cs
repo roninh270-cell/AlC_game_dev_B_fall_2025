@@ -7,7 +7,7 @@ public class EndLevel : MonoBehaviour// add the scene managemnt name space
     public bool FinalLevel;
     public string nextLevelName;
 
-    private void OnTriggerEnder2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
