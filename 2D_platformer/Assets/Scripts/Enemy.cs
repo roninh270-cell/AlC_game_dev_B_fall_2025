@@ -38,7 +38,6 @@ public class Enemy : MonoBehaviour
                 targetPos = startPos;
             }
         }
-    
     }
 
 
