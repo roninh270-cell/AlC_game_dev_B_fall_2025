@@ -1229,6 +1229,10 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 421341439}
+    - target: {fileID: 8868979825996803453, guid: 3f8c4f39e6c0c5f41b334d42354eb0c1, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
